@@ -10,3 +10,9 @@ https://www.youtube.com/watch?v=cqONkvH-KoM
  
 youtube-dl -f 'all[vcodec=none]' -o '%(title)s-%(format)s.%(ext)s' cqONkvH-KoM
 youtube-dl -f 'all[acodec=none]' -o '%(title)s-%(format)s.%(ext)s' cqONkvH-KoM
+
+    MP4Box -dash-strict 8000 -rap -frag-rap  -bs-switching no -profile "dashavc264:live" "1080.mp4" "720.mp4" "480.mp4" "360.mp4" "240.mp4" "144.mp4" "aud.m4a" -out "mpd/100100.mpd"
+
+ok
+MP4Box -dash 8000 -rap -segment-name %s -bs-switching no -profile live "1080p.mp4" "720.mp4" "480.mp4" "360.mp4" "240.mp4" "144.m
+p4" "aud.m4a" -out "mpd/100100.mpd"
