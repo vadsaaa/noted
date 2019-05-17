@@ -1,1 +1,12 @@
 youtube-dl.exe -F https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd
+youtube-dl -F --list-formats https://www.youtube.com/watch?v=cqONkvH-KoM
+youtube-dl -F --list-formats https://cdn.smart-karaoke.com/songs/original-dash/1032294/1032294.mpd
+youtube-dl -F --list-formats https://smart-karaoke.com/apps/dash/130035/130035.mpd
+
+
+https://www.youtube.com/watch?v=cqONkvH-KoM
+
+ youtube-dl https://www.youtube.com/watch?v=cqONkvH-KoM --skip-download --print-json > test.txt
+ 
+youtube-dl -f 'all[vcodec=none]' -o '%(title)s-%(format)s.%(ext)s' cqONkvH-KoM
+youtube-dl -f 'all[acodec=none]' -o '%(title)s-%(format)s.%(ext)s' cqONkvH-KoM
